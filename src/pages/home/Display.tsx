@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 
 
+
 interface DisplayData {
     id: number;
     overview: string;
@@ -71,10 +72,12 @@ const Display = (props: Props) => {
             max='0' 
             step='0.5'
             onChange={(e) => setRating(Number(e.target.value))}
-            onClick={() => rate(displayData.id)}
             className="border border-[#353535] px-2 py-2 rounded-sm"
             />
-            <button className="bg-[#353535] text-white px-4 py-2 rounded-sm">Rate</button>
+            <button 
+              onClick={() => rate(displayData.id)}
+              className="bg-[#353535] text-white px-4 py-2 rounded-sm"
+              >Rate</button>
           </div>
             </div>
            
